@@ -3,22 +3,26 @@
     $state_array = explode(" ",$states);
     print_r($state_array);
 
-    // $subject = ['HTML','CSS','JAVASCRIPT','PHP','WORDPRESS'];
+    $subject = ['HTML','CSS','JAVASCRIPT','PHP','WORDPRESS'];
 
-    // $subject_as_string = implode("<br/>",$subject);
-    // echo "<br/> $subject_as_string";
+    $subject_as_string = implode("<br/>",$subject);
+    echo "<br/> $subject_as_string";
+    echo "<br>";
+    $person = array("NamE"=>"ankit","AGe"=>38,"Gender"=>true);
+    print_r($person);
 
-    // $person = array("NamE"=>"ankit","AGe"=>38,"Gender"=>true);
-    // print_r($person);
+    $person = array_change_key_case($person,CASE_LOWER);
+    echo "<br/> after changing cases <hr/>";
+    print_r($person);
 
-    // $person = array_change_key_case($person,CASE_LOWER);
-    // echo "<br/> after changing cases <hr/>";
-    // print_r($person);
+    //check whether person has email key or not 
+    $isFound = array_key_exists("email",$person);
+    echo "<br/> is email exists in array $isFound";
 
-    // //check whether person has email key or not 
-    // $isFound = array_key_exists("email",$person);
-    // echo "<br/> is email exists in array $isFound";
-
-    // $isFound = array_key_exists("age",$person);
-    // echo "<br/> is email exists in array $isFound";
+    $isFound = array_key_exists("age",$person);
+    echo "<br/> is email exists in array $isFound";
+echo "<br/>";
+    $queue=array("orange","banana");
+    array_unshift($queue,"apple","raspberry");
+    print_r($queue);
 ?>
